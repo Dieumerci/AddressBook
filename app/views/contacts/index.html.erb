@@ -1,0 +1,46 @@
+
+<br>
+<hr>
+    <div class="row">
+        <div class="col-10">
+            <h2>Contacts</h2>
+        </div>
+        <div class="col-2">
+            <%= link_to "Create", new_contact_path , class: "btn btn-warning" %>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="row">
+        <div class="col-12" style="">
+            <div class="panel panel-default list-group-panel">
+                <div class="panel-body">
+                    <ul class="list-group list-group-header bg-primary">
+                        <li class="list-group-item list-group-body bg-primary" style="color:white">
+                            <div class="row">
+                                <div class="col-1 text-left">#No:</div>
+                                <div class="col-2 text-left">Name</div>
+                                <div class="col-2">Email</div>
+                                <div class="col-2">Cell</div>
+                                <div class="col-2">Date of Birth</div>
+                            </div>
+                        </li>
+                    </ul>
+<% @contacts.each do |contact| %>                    
+                    <ul class="list-group list-group-body" style="">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-1 text-left"><%= contact.id %></div>
+                                <div class="col-2 text-left" style=""> <%= link_to contact.name, contact %> </div>
+                                <div class="col-2" style=""><%= contact.email %></div>
+                                <div class="col-2" style=""><%= contact.cell %></div>
+                                <div class="col-2" style=""><%= contact.date %></div>
+                            
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
