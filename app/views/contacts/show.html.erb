@@ -1,10 +1,11 @@
+<hr>
 <br>
 <h2>Single Contact</h2>
 <hr>
 <div class="col-12" >
         <div class="panel panel-info ">
           <div class="panel-heading ">
-            <h3 class="panel-title"><%= @contact.name %></h3>
+            <h3 class="panel-title">ID: <%= @contact.id %></h3>
           </div>
           <div class="panel-body">
             <div class="row">
@@ -12,13 +13,17 @@
               <div class=" col-md-9 "> 
                 <table class="table table-user-information">
                   <tbody>
+                      <tr>
+                          <td>Name:</td>
+                          <td><%= @contact.name %></td>
+                        </tr>
                     <tr>
                       <td>Email:</td>
                       <td><a href=""><%= @contact.email %></a></td>
                     </tr>
                     <tr>
                       <td>Phone Number:</td>
-                      <td><%= @contact.cell %>(Landline)<br><br>555-4567-890(Mobile)</td>
+                      <td><%= @contact.cell %>- (Mobile)</td>
                     </tr>
                     <tr>
                       <td>Date of Birth</td>

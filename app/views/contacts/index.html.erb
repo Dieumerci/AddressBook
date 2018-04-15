@@ -35,8 +35,8 @@
                                 <div class="col-2" style=""><%= contact.email %></div>
                                 <div class="col-2" style=""><%= contact.cell %></div>
                                 <div class="col-2" style=""><%= contact.date %></div>
-                                <%= link_to "View", edit_contact_path(contact.id), class: "btn btn-primary" %>
-                                
+                                <div class="col-2" style=""><%= link_to "Edit", edit_contact_path(contact.id), class: "btn btn-success" %></div>
+                                <%= link_to "Profile", contact_path(contact.id), class: "btn btn-secondary" %>
                             </div>
                         </li>
                     </ul>
