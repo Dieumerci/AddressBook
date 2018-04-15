@@ -3,11 +3,7 @@ An address book web application (RubyOnRails) that stores phone numbers, name, e
 
 As Kanye West said:
 
-> We're living the future so
-> the present is our past.
-
-I think you should use an
-`<addr>` element here instead
+> Ruby Rocks
 
 ## Setup Instructions:
 
