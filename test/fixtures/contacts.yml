@@ -6,8 +6,8 @@ one:
   email: MyText
   date: 2018-04-14
 
-two:
-  name: MyString
-  cell: 1
-  email: MyText
+post_contact:
+  name: Dee
+  cell: 0728792881
+  email: mydee@gmail.com
   date: 2018-04-14

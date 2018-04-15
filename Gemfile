@@ -28,8 +28,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'simple_form', '~> 4.0'
@@ -40,9 +38,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
   gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
   gem 'selenium-webdriver'
+  gem 'capybara', '~> 3.0', '>= 3.0.2'
+  gem 'factory_girl', '~> 4.9'
 end
 
 group :development do
