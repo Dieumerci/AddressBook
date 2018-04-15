@@ -13,18 +13,21 @@ I think you should use an
 
 ```
 # Create a new work branch Clone from:
-git clone https://github.com/Dieumerci/AddressBook.git
-cd addressbook
-# Create a new work branch
-git checkout -b addressbook
-# Install all the required gems
-bundle install         
-
+  git clone https://github.com/Dieumerci/AddressBook.git
+  cd addressbook
+  
+==== Create a new work branch ====
+  git checkout -b addressbook
+  
+==== Install all the required gems====
+  Run :: bundle install         
   Run :: rake db:migrate
-    # Run tests
+
+==== Start the Web Application ====
     Run :: rake / rspec            
-    # Start the server
     Run :: rails s    
-  # Load http://localhost:3000/admin in your browser
+################################################################  
+  
+  Load http://localhost:3000 in your browser
 ```
 
