@@ -12,17 +12,19 @@ I think you should use an
 ## Setup Instructions:
 
 ```
-git clone git://github.com/jwood/addressbook.git
+# Create a new work branch Clone from:
+git clone https://github.com/Dieumerci/AddressBook.git
 cd addressbook
-gem install bundler
-bundle install
+# Create a new work branch
+git checkout -b addressbook
+# Install all the required gems
+bundle install         
 
-cp config/database.yml.template config/database.yml
-# configure your database
-
-cp config/application_config.yml.template config/application_config.yml
-# configure the application
-
-bundle exec rake db:migrate
+  Run :: rake db:migrate
+    # Run tests
+    Run :: rake / rspec            
+    # Start the server
+    Run :: rails s    
+  # Load http://localhost:3000/admin in your browser
 ```
 
