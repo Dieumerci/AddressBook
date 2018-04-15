@@ -31,11 +31,12 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-1 text-left"><%= contact.id %></div>
-                                <div class="col-2 text-left" style=""> <%= link_to contact.name, contact %> </div>
+                                <div class="col-2 text-left" style=""> <%= contact.name %> </div>
                                 <div class="col-2" style=""><%= contact.email %></div>
                                 <div class="col-2" style=""><%= contact.cell %></div>
                                 <div class="col-2" style=""><%= contact.date %></div>
-                            
+                                <%= link_to "View", edit_contact_path(contact.id), class: "btn btn-primary" %>
+                                
                             </div>
                         </li>
                     </ul>

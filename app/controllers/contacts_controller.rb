@@ -1,7 +1,6 @@
 class ContactsController < ApplicationController
 
     before_action :find_contact, only: [:show, :edit, :update, :destroy]
-
     def index
         @contacts = Contact.all.order("created_at DESC")  
     end
@@ -16,7 +15,6 @@ class ContactsController < ApplicationController
 
     def create   
         @contact = Contact.new(contact_params)
-
             if @contact.save
                 redirect_to root_path
             else
