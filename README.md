@@ -1,24 +1,28 @@
-# README
+# Address_Book
+An address book web application (RubyOnRails) that stores phone numbers, name, email, and displays mailing labels.. CRUD functionality
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+As Kanye West said:
 
-Things you may want to cover:
+> We're living the future so
+> the present is our past.
 
-* Ruby version
+I think you should use an
+`<addr>` element here instead
 
-* System dependencies
+## Setup Instructions:
 
-* Configuration
+```
+git clone git://github.com/jwood/addressbook.git
+cd addressbook
+gem install bundler
+bundle install
 
-* Database creation
+cp config/database.yml.template config/database.yml
+# configure your database
 
-* Database initialization
+cp config/application_config.yml.template config/application_config.yml
+# configure the application
 
-* How to run the test suite
+bundle exec rake db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
