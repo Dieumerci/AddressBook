@@ -27,3 +27,19 @@ As Kanye West said:
   Load http://localhost:3000 in your browser
 ```
 
+## Run the Docker file using following commands:
+```
+docker-compose up -d # Visit http://localhost:3000 to see it running!
+
+# Attach our terminal to the 'web' container (it must be running) - notice that
+# we must use the created container name, not the service name:
+docker attach addreesbook_web_1 
+
+# Run one-off commands when the web container is not running:
+docker-compose run --rm web bash # or `rails console`, etc
+
+# Run commands inside a running container:
+docker-compose exec web bash
+
+
+```
