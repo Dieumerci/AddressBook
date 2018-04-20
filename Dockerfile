@@ -1,13 +1,21 @@
-FROM iron/ruby:dev
+FROM ruby:2.5-apline 
 
-RUN apk update && apk upgrade
-RUN apk add nodejs
+RUN apt-get update -yqq \
+    && apt-get install -yqq --no-install-recommends \
+        postgresql-client \
+        nodejs \
+        qt5-default \ 
+        libqt5webkit5-dev \
+    && apt-get -q clean \
+    && rm -rf /var/lib/apt/lists
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 ADD Gemfile* /app/
 RUN bundle install
-ADD . /app/
+COPY . .
 
 
-ENTRYPOINT [ "bin/rails" ]
+CMD bundle exec unicorn -c ./config/unicorn.rb 
+
+
